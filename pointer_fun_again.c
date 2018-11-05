@@ -62,12 +62,12 @@ int main(int argc, char const *argv[])
 	strcpy(play_struct.a_string, "Test");
 	
 	print_struct(play_struct, play_struct_pointer);
-	change_struct(play_struct, play_struct_pointer);
+	change_struct(play_struct, play_struct_pointer);	//only play_struct_pointer gets changed because it's a pointer
 	print_struct(play_struct, play_struct_pointer);
 	
 	print_string(play_struct.a_string);
 	
-	change_string(play_struct.a_string, &another_string_pointer);
+	change_string(play_struct.a_string, &another_string_pointer);	//both get changed because they are both pointers
 	
 	print_string(another_string);
 	print_string(play_struct.a_string);
